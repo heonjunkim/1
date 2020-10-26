@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  head
+    title CISUM Player
+  body
+    nav
+      ul
+        li
+          a(href="/").fab.fa-napster
+        li 
+          a(id="login_a").fas.fa-check
+    section(id="main-section")
+      aside(id="left-menu")
+        include ./cisumList.pug
+      section(id="content")
+        div(id="playlist-body")
+          include ./playList.pug
+      aside(id="right-menu")
+        div(id="player-body").loading
+          include ./player.pug
+  footer
+    address Contact US
+      a(href="https://www.youtube.com/")
+        i.fab.fa-youtube
+      a(href="https://www.instagram.com/plutorxr/")
+        i.fab.fa-instagram
